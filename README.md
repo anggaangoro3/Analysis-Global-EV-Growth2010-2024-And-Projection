@@ -108,9 +108,7 @@ Model **Polynomial Regression** yang dikembangkan dalam notebook ini memproyeksi
 ```text
 analysis-global-ev-growth/
 │
-├── 📂 data/                                   # Folder dataset
-│   └── IEA-Global-EV-Data 2024.csv            # Data mentah dari IEA
+├── 📂 data Link: https://www.kaggle.com/datasets/patricklford/global-ev-sales-2010-2024/data
 │
 ├── 📓 Analysis_Global_EV_Growth...ipynb       # Notebook utama (EDA & Modeling)
-├── 📄 LICENSE                                 # Lisensi CC BY 4.0
 └── 📄 README.md                               # Dokumentasi Proyek
