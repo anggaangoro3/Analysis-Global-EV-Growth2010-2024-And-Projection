@@ -2,11 +2,10 @@
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![Jupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?logo=jupyter&logoColor=white)](https://jupyter.org/try)
-[![Scikit-Learn](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Pandas](https://img.shields.io/badge/Data%20Processing-Pandas-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-> **Project Data Science & Forecasting**: Analisis komprehensif tren adopsi kendaraan listrik (EV) global menggunakan data historis IEA dan pemodelan prediktif untuk memproyeksikan pertumbuhan masa depan.
+> **Project Data Science & Analysis**: Analisis komprehensif tren adopsi kendaraan listrik (EV) global serta visualisasi skenario proyeksi masa depan berdasarkan data International Energy Agency (IEA).
 
 ---
 
@@ -16,19 +15,19 @@
 | :--- | :--- |
 | [**📖 Overview**](#-overview) | Latar belakang proyek dan sumber data. |
 | [**🎯 Objective**](#-objective) | Tujuan analisis dan pertanyaan bisnis. |
-| [**⚙️ Process & Methodology**](#️-process--methodology) | Langkah teknis dari *cleaning* hingga *modeling*. |
+| [**⚙️ Process & Methodology**](#️-process--methodology) | Langkah teknis analisis data. |
 | [**📊 Key Insights**](#-key-insights) | Temuan utama dari data historis. |
-| [**🔮 Future Projection**](#-future-projection) | Hasil prediksi model Machine Learning. |
+| [**🔮 Future Outlook**](#-future-outlook) | Visualisasi skenario proyeksi IEA (STEPS & APS). |
 | [**🛠️ Tech Stack**](#️-tech-stack) | Bahasa dan pustaka yang digunakan. |
-| [**📂 Project Structure**](#-project-structure) | Struktur direktori repositori. |
+| [**💻 Getting Started**](#-getting-started) | Cara menjalankan proyek ini. |
 
 ---
 
 ## 📖 Overview
 
-Perubahan iklim mendorong transisi energi global, dengan sektor transportasi sebagai fokus utama dekarbonisasi. Proyek ini menganalisis dataset **Global EV Outlook 2024** dari *International Energy Agency (IEA)* untuk memahami dinamika pasar kendaraan listrik.
+Perubahan iklim mendorong transisi energi global, dengan sektor transportasi sebagai fokus utama dekarbonisasi. Proyek ini menganalisis dataset **Global EV Outlook** dari *International Energy Agency (IEA)* untuk memahami dinamika pasar kendaraan listrik.
 
-Analisis ini mencakup evaluasi penjualan historis (2010-2024), perbandingan antar powertrain (BEV vs PHEV), serta dominasi pasar regional (China, Eropa, USA). Selain itu, proyek ini menerapkan algoritma *Machine Learning* untuk memprediksi tren adopsi EV di tahun-tahun mendatang.
+Analisis ini mencakup evaluasi penjualan historis (2010-2024), perbandingan antar powertrain (BEV vs PHEV), serta dominasi pasar regional (China, Eropa, USA). Selain itu, proyek ini memvisualisasikan data proyeksi resmi dari IEA untuk memberikan gambaran potensi pertumbuhan pasar di masa depan.
 
 ---
 
@@ -38,7 +37,7 @@ Tujuan utama dari analisis ini adalah:
 
 1.  **Historical Analysis**: Memetakan pertumbuhan eksponensial penjualan EV dan *stock share* di berbagai belahan dunia.
 2.  **Regional Comparison**: Mengidentifikasi pemimpin pasar dan membandingkan tingkat adopsi antara negara maju dan berkembang.
-3.  **Future Forecasting**: Membangun model regresi untuk memproyeksikan volume penjualan EV global hingga tahun 2030, memberikan wawasan bagi pemangku kepentingan industri energi dan otomotif.
+3.  **Future Outlook**: Menganalisis skenario masa depan berdasarkan data proyeksi IEA (*Stated Policies Scenario* vs *Announced Pledges Scenario*) untuk melihat arah tren industri hingga 2030+.
 
 ---
 
@@ -47,17 +46,18 @@ Tujuan utama dari analisis ini adalah:
 Proyek ini dijalankan melalui pipeline analisis data berikut:
 
 ### 1. Data Preparation
-* **Data Cleaning**: Menangani *missing values*, standarisasi nama kolom, dan filterisasi data relevan (kategori "EV Sales" dan "EV Stock").
-* **Feature Selection**: Memilih variabel kunci seperti Tahun, Wilayah, Powertrain (BEV/PHEV), dan Nilai Penjualan.
+* **Data Cleaning**: Menangani *missing values*, standarisasi nama kolom, dan filterisasi data relevan (kategori "EV Sales", "EV Stock", dan "Projection").
+* **Feature Selection**: Memilih variabel kunci seperti Tahun, Wilayah, Powertrain (BEV/PHEV), dan kategori Proyeksi.
 
 ### 2. Exploratory Data Analysis (EDA)
 * Visualisasi tren pertumbuhan tahunan (YoY) menggunakan *Line Chart* dan *Bar Chart*.
 * Analisis komposisi pasar (BEV vs PHEV) untuk melihat preferensi konsumen.
 * Segmentasi geografis untuk melihat kontribusi regional terhadap pasar global.
 
-### 3. Predictive Modeling
-* Menggunakan **Polynomial Regression** (Scikit-Learn) untuk menangkap pola pertumbuhan non-linear (eksponensial) dari data adopsi EV.
-* Evaluasi model menggunakan metrik statistik untuk memastikan akurasi garis tren prediksi.
+### 3. Scenario Analysis (Projections)
+* Membandingkan data historis dengan data proyeksi masa depan yang disediakan dalam dataset IEA, yaitu:
+    * **STEPS (Stated Policies Scenario)**: Proyeksi berdasarkan kebijakan pemerintah yang sudah ditetapkan saat ini.
+    * **APS (Announced Pledges Scenario)**: Proyeksi ambisius jika seluruh target iklim yang dijanjikan negara-negara tercapai.
 
 ---
 
@@ -71,13 +71,12 @@ Berdasarkan analisis data historis (2010-2024):
 
 ---
 
-## 🔮 Future Projection
+## 🔮 Future Outlook
 
-Model **Polynomial Regression** yang dikembangkan dalam notebook ini memproyeksikan:
+Visualisasi data proyeksi (STEPS & APS) dalam notebook ini mengindikasikan:
 
-* Kelanjutan tren positif (bullish) untuk adopsi EV global di tahun-tahun mendatang.
-* Kurva adopsi diprediksi akan semakin curam, mengindikasikan percepatan transisi energi massal menjelang 2030.
-* *(Lihat notebook untuk grafik proyeksi detail dan angka spesifik prediksi tahunan)*.
+* **Tren Bullish Berlanjut**: Baik skenario konservatif (STEPS) maupun ambisius (APS) menunjukkan bahwa adopsi EV akan terus meningkat drastis.
+* **Gap Antar Skenario**: Terdapat perbedaan volume yang signifikan antara kebijakan saat ini (STEPS) dengan target iklim (APS), menyoroti perlunya kebijakan yang lebih agresif untuk mencapai target *Net Zero*.
 
 ---
 
@@ -86,7 +85,6 @@ Model **Polynomial Regression** yang dikembangkan dalam notebook ini memproyeksi
 * **Bahasa Pemrograman**: Python 3.10+
 * **Data Manipulation**: Pandas, NumPy
 * **Visualization**: Matplotlib, Seaborn
-* **Machine Learning**: Scikit-Learn (LinearRegression, PolynomialFeatures, Train-Test Split)
 
 ---
 
