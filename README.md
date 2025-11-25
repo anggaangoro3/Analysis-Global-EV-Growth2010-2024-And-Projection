@@ -4,7 +4,7 @@
 [![Jupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?logo=jupyter&logoColor=white)](https://jupyter.org/try)
 [![Scikit-Learn](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Pandas](https://img.shields.io/badge/Data%20Processing-Pandas-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-[![License](https://img.shields.io/badge/License-MIT-green)](./LICENSE)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 > **Project Data Science & Forecasting**: Analisis komprehensif tren adopsi kendaraan listrik (EV) global menggunakan data historis IEA dan pemodelan prediktif untuk memproyeksikan pertumbuhan masa depan.
 
@@ -90,12 +90,27 @@ Model **Polynomial Regression** yang dikembangkan dalam notebook ini memproyeksi
 
 ---
 
+## 💻 Getting Started
+
+1. Clone repositori ini:
+   ```bash
+   git clone [https://github.com/anggaangoro3/Analysis-Global-EV-Growth2010-2024-And-Projection.git](https://github.com/anggaangoro3/Analysis-Global-EV-Growth2010-2024-And-Projection.git)
+   ```
+2. Install library yang dibutuhkan:
+   ```bash
+   pip install pandas numpy matplotlib seaborn scikit-learn
+   ```
+3. Buka file notebook:
+   `Analysis_Global_EV_Growth2010_2024_And_Projection.ipynb`
+
 ## 📂 Project Structure
 
 ```text
 analysis-global-ev-growth/
 │
-├── [IEA-Global-EV-Data 2024.csv ](https://www.kaggle.com/datasets/patricklford/global-ev-sales-2010-2024/data)# Data mentah dari IEA
+├── 📂 data/                                   # Folder dataset
+│   └── IEA-Global-EV-Data 2024.csv            # Data mentah dari IEA
 │
 ├── 📓 Analysis_Global_EV_Growth...ipynb       # Notebook utama (EDA & Modeling)
+├── 📄 LICENSE                                 # Lisensi CC BY 4.0
 └── 📄 README.md                               # Dokumentasi Proyek
